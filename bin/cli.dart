@@ -1,3 +1,24 @@
+const version = '0.0.1';
 void main(List<String> arguments) {
-  print('Hello world!');
+  if (arguments.isEmpty || arguments.first == 'help') {
+    printUsage();
+  } else if (arguments.first == 'versions') {
+    print('DartPedia CLI v$version');
+  } else if (arguments.first == 'search') {
+    final inputArgs = arguments.length > 1 ? arguments.sublist(1) : null;
+    searchWikipedia(inputArgs);
+  } else {
+    printUsage();
+  }
+}
+
+void printUsage() {
+  print(
+    "The following commands are valid: 'help', 'version', 'search <ARTICLE-TITLE>'",
+  );
+}
+
+void searchWikipedia(List<String>? arguments) {
+  // Add this new function and add ? to arguments type
+  print('searchWikipedia received arguments: $arguments');
 }
