@@ -17,7 +17,7 @@ void main(List<String> arguments) {
 
 void printUsage() {
   print(
-    "The following commands are valid: 'help', 'version', 'search <ARTICLE-TITLE>'",
+    "The following commands are valid: 'help', 'version', 'search a <ARTICLE-TITLE>'",
   );
 }
 
