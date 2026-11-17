@@ -1,12 +1,16 @@
 import 'dart:io';
 import 'package:http/http.dart' as http;
+
 import 'package:command_runner/command_runner.dart';
 
 const version = '0.0.1';
 void main(List<String> arguments) async {
-  var runner = CommandRunner();
+  final teste = Contagem(numero1: 43, numero2: 57);
 
-  await runner.run(arguments);
+  // teste.numero1 = 20;
+
+  print('Vamos contar: ${teste.Conta()}');
+  // print('Usage: ${verboseOption.usage}');
 }
 
 void printUsage() {
